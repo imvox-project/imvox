@@ -1,0 +1,10 @@
+[package]
+name = "imvoxcore" # for crates.io
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "imvoxcore" # output: libimvoxcore.so
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
