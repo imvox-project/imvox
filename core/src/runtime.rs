@@ -24,7 +24,7 @@ impl Runtime {
         Logger::info("Loaded plugins:");
 
         for plugin in &self.plugins {
-            println!(" - {} {}", plugin.name, plugin.version);
+            println!(" - {} {}: '{}'", plugin.name, plugin.version, plugin.desc);
         }
     }
 }

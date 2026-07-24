@@ -1,10 +1,11 @@
 [package]
-name = "imvoxcore" # for crates.io
-version = "0.1.0"
+name = "imvoxcore"
+version = "0.0.1"
 edition = "2024"
+license = "MIT"
 
 [lib]
-name = "imvoxcore" # output: libimvoxcore.so
+name = "imvoxcore"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]

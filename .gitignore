@@ -1,38 +1,29 @@
-# Rust build artifacts
 target/
 **/target/
 
-# Rust lockfiles for libraries
 **/Cargo.lock
 !Cargo.lock
 
-# Rust IDE files
+# IDE files
 .vscode/
 .idea/
 *.rs.bk
 
-# Rust analyzer / rustc artifacts
 .rustc_info.json
 
-# Environment files
 .env
 .env.*
 
-# Temporary files
 *.tmp
 *.temp
 *.swp
 *.swo
 *~
 
-# Logs
 *.log
 
-# Build outputs
 *.so
 *.dylib
 *.dll
 *.exe
-
-# Generated documentation
-/doc/
+*.so

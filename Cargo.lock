@@ -4,11 +4,11 @@ version = 4
 
 [[package]]
 name = "imvoxcli"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "imvoxcore",
 ]
 
 [[package]]
 name = "imvoxcore"
-version = "0.1.0"
+version = "0.0.1"
