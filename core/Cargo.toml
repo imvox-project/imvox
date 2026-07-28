@@ -9,3 +9,4 @@ name = "imvoxcore"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
+mlua = { version = "0.12.0", features = ["lua54", "vendored"] }
