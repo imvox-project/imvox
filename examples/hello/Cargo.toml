@@ -1,12 +1,13 @@
 [package]
-name = "imvoxcore"
+name = "imvox_hello"
 version = "0.0.1"
 edition = "2024"
 license = "MIT"
 
 [lib]
-name = "imvoxcore"
-crate-type = ["rlib"] # "cdylib"
+name = "imvox_hello"
+crate-type = ["cdylib"]
 
 [dependencies]
-# none
+
+[workspace]

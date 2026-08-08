@@ -1,0 +1,14 @@
+[package]
+name = "imvoxloader"
+version = "0.0.1"
+edition = "2024"
+license = "MIT"
+
+[lib]
+name = "imvoxloader"
+crate-type = ["rlib"]
+
+[dependencies]
+imvoxcore = { path = "../core", version = "0.0.1" }
+libloading = "0.8"
+anyhow = "1"

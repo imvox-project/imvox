@@ -1,5 +1,5 @@
 # IMVOX CLI
-A imvox cli interface
+A imvox cli interface, for testing only
 
 # HELP
 

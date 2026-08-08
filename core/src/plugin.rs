@@ -1,20 +1,27 @@
-#[derive(Debug, Clone, Default)]
+//! Plugin ABI definitions.
+//!
+//! `core` is `no_std`, zero-dep. Defines the stable contract for `.so` modules.
+//! `loader` handles dynamic loading and fills the function pointers.
+
+#[repr(C)]
+#[derive(Clone, Copy)]
+pub struct PluginVTable {
+    pub run: unsafe extern "C" fn(),
+}
+
+#[derive(Clone, Copy)]
 pub struct Plugin {
-    pub name: String,
-    pub desc: String,
-    pub version: String,
+    pub name: &'static str,
+    pub vtable: PluginVTable,
 }
 
 impl Plugin {
-    pub fn new(name: &str, version: &str) -> Self {
-        Self {
-            name: name.into(),
-            version: version.into(),
-            ..Default::default()
-        }
+    pub const fn new(name: &'static str, vtable: PluginVTable) -> Self {
+        Self { name, vtable }
     }
-    pub fn desc(mut self, desc: &str) -> Self {
-        self.desc = desc.into();
-        self
+
+    // Caller must ensure the symbol actually exists and matches this signature.
+    pub fn run(&self) {
+        unsafe { (self.vtable.run)() }
     }
 }
