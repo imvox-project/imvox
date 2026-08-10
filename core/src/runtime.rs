@@ -4,7 +4,7 @@ use crate::plugin::Plugin;
 ///
 /// `core` has zero dependencies, so it cannot use `alloc::Vec`. A fixed
 /// capacity array keeps everything on the stack / in static memory.
-pub const MAX_PLUGINS: usize = 32;
+pub const MAX_PLUGINS: usize = 32; // TODO: make it so that it can be changed from external forces
 
 pub struct Runtime {
     plugins: [Option<Plugin>; MAX_PLUGINS],

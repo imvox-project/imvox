@@ -3,14 +3,15 @@
 //! This crate is the *only* place `std` and dynamic-loading logic live.
 //! It opens `.so` files, resolves their exported symbols against the
 //! ABI defined in `imvoxcore`, and registers the result into a
-//! `imvoxcore::Runtime`. Shells (like `cli`) never touch `.so` files or
+//! `imvoxcore::Runtime`. Shells (like `imvoxcli`) never touch `.so` files or
 //! `core` directly — they go through `Loader`.
 
 use std::collections::HashMap;
 
 use anyhow::{Context, Result};
-use imvoxcore::{Plugin, PluginVTable, Runtime};
 use libloading::{Library, Symbol};
+
+use imvoxcore::{Plugin, PluginVTable, Runtime};
 
 /// Every module must export a function with this exact C signature,
 /// named `imvox_plugin_run`.

@@ -20,12 +20,6 @@ enum Command {
         #[arg(short, long, default_value = "module")]
         name: String,
     },
-    /// Load the bundled test 'hello world' module and run it.
-    Hello {
-        /// Path to the compiled hello-world .so (defaults to target/debug).
-        #[arg(long, default_value = "target/debug/libimvox_hello.so")]
-        path: String,
-    },
     /// List currently loaded plugins.
     List,
 }
@@ -48,10 +42,6 @@ fn main() -> Result<()> {
         Command::Load { path, name } => {
             let leaked_name: &'static str = Box::leak(name.into_boxed_str());
             loader.load_module(leaked_name, &path)?;
-            loader.run_all();
-        }
-        Command::Hello { path } => {
-            loader.load_module("hello", &path)?;
             loader.run_all();
         }
         Command::List => {

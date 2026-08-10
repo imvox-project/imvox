@@ -2,6 +2,6 @@
 //! Compiled as a `.so` and loaded dynamically via `imvoxloader::Loader`.
 
 #[unsafe(no_mangle)]
-pub extern "C" fn imvox_plugin_run() {
+pub extern "C" fn imvox_plugin_run() { // use this function name to get started
     println!("Hello, world! (from imvox_hello.so)");
 }

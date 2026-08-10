@@ -6,7 +6,7 @@ license = "MIT"
 
 [lib]
 name = "imvoxcore"
-crate-type = ["rlib"] # "cdylib"
+crate-type = ["rlib"]
 
 [dependencies]
 # none
