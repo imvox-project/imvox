@@ -1,0 +1,1 @@
+This is a simple example of hello world on imvox runtime and importing the startup function "`imvox_plugin_run()`"

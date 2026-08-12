@@ -1,0 +1,11 @@
+[package]
+name = "imvox_hello_world"
+version = "0.0.1"
+edition = "2024"
+license = "MIT"
+
+[lib]
+name = "imvox_hello_world"
+crate-type = ["cdylib"]
+
+[workspace] # Use this to avoid adding a plugin to your workspace and getting an error.

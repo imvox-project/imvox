@@ -1,37 +1,57 @@
-# WIP (WORK IN PROGRESS)
-__NOTE:__ this repository is not currently intended for use.  
-You shouldn't fork this, you shouldn't browse this or use this.  
-Everything will probably change in the future.  
+# [WIP](docs/WIP.md)
 
-# What is IMVOX
-is a modular editor with a modules and a CLI for console-based operation  
-this project, its a cargo workspace for imvox core/cli and loader  
-  
-__Our Git Hostings:__  
-[Codeberg (Main)](https://codeberg.org/bhorolsky/imvox)  
-[Github (Mirror)](https://github.com/bhorolsky/imvox)  
+# What is imvox?
+Is a modular runtime for anything you want with a plugins and a minimal CLI interface for console-based operation  
+This project, it's a cargo workspace for official imvoxcore/loader/cli projects  
+__Our git hostings:__  
+[Codeberg (main)](https://codeberg.org/bhorolsky/imvox)  
+[Github (mirror)](https://github.com/bhorolsky/imvox)  
 
-# Getting Started
+# This repository includes:
+- official imvoxcore/loader/cli implementations projects
+- imvox documentation (README, .md files) understandable for beginners
+- cargo deny list, with doesnt allow you use code with not compatible with MIT License
 
-__How To Start:__  
+# This repository excludes:
+- cargo tests - it's will be added in the future // TODO
+- plugins/modules - no, only examples + other repos which are independent of this repository
+
+# Getting Started: (from imvoxcli documentation)
+__How to start:__  
 - Clone this repo: `git clone https://codeberg.org/bhorolsky/imvox.git && cd imvox` or from [github.com](https://github.com/bhorolsky/imvox)  
-- Build all workspace: `cargo build --workspace` or `--release` flag for optimized for release version  
-- Now you can run cli: `cargo run -p imvoxcli`  
+- Build all workspace: `cargo build --workspace` or `--release` flag for optimized release version  
+- Now you can run imvoxcli: `cargo run -p imvoxcli`  
 
 __Hello world:__  
-- Build hello world module: `cd examples/hello/ && cargo build`  
-- And you can load our module in cli with command: `/path/to/imvoxcli load /path/to/libimvox_hello.so`  
+- Build your hello world module: `cd examples/hello/ && cargo build`  
+- And you can load our module in imvoxcli with command: `/path/to/imvoxcli load /path/to/libimvox_hello.so`  
 
-# Documentation:
-__Advanced Build Guides:__
-- [core](placeholder)
-- [loader](placeholder)
-- [Interfaces](placeholder)
+See more about imvoxcli [there](cli/README.md)  
+
+# READMEs:
+- [imvoxcore](core/README.md)
+- [imvoxloader](loader/README.md)
+- [imvoxcli](cli/README.md)
+
+# Docs:
+- [imvoxcli](docs/imvoxcli)
+- [imvoxloader](docs/imvoxloader)
+- [imvoxcore](docs/imvoxcore)
 
 # Q&A:
-placeholder
+- Q: "Is this app an editor? For music, media, or something like that?"  
+- A: __No, this is a runtime for future applications and tools.__  
+- Q: "What is the goal of the project?"  
+- A: __The goal of the project is to create a future application where all applications are modules that communicate via a single bus, communicate with other modules, and where there is no hard API, the API is minimal, the rest will be behind the implementation of modules and third-party clients.__  
+- Q: "What's next for the project?"  
+- A: __In the future, we want to create a framebuffer plugin that will occupy a bus, like "framebuffer," but the implementation for each interface will be different, like "framebuffertui" and "framebuffergui," and they will all occupy the same bus and interpret the data differently.
+We also need to polish the project itself and make this fully possible while it's still WIP. If you're even reading this, you're among the first. Don't use this project yet, as it's still in development and things could change soon...__  
+- Q: "How is imvox different from other runtimes?"  
+- A: __Nothing. You can use mature and more convenient runtimes than imvox if you want, this is a learning project for myself, it should not kill or replace the existing one, it is simply there as a more modular and lightweight alternative, I am not saying that there are no alternatives to my project, I am just doing this for study, and with the kind of architecture and minimalism that only I need__  
+- Q: "Can I use AI?"  
+- A: __For assistance, yes; for blind generation, no. Using AI is super useful, but make sure the comments are meaningful and the code isn't hardcoded, then everything will be perfect. I use AI to write code every day myself__  
 
-# Contacts:
+# Our Contacts:
 - [Our Discord](https://discord.gg/c7amwQf4KJ)
 - [Our Telegram](https://t.me/imvoxproject)
 - [bhorolsky GitHub.io page](https://bhorolsky.github.io/)
