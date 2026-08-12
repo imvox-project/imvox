@@ -10,5 +10,5 @@ crate-type = ["rlib"]
 
 [dependencies]
 imvoxcore = { path = "../core", version = "0.0.1" }
-libloading = "0.8"
+libloading = "0.9"
 anyhow = "1"
