@@ -1,34 +1,38 @@
-# [WIP](docs/WIP.md)
+<p align="center">
+  <img src="assets/imvox.png" alt="imvox" width="200">
+</p>
 
-# What is imvox?
+# IMVOX
+
+## What is imvox?
 Is a modular runtime with plugins  
 This project, it's a cargo workspace for official imvoxcore/loader/cli projects  
 __Our git hostings:__  
 [Codeberg (main)](https://codeberg.org/bhorolsky/imvox)  
 [GitHub (mirror)](https://github.com/bhorolsky/imvox)  
 
-# This repository includes:
+## This repository includes:
 - official imvoxcore/loader/cli implementations projects
 - imvox documentation (README, .md files) understandable for beginners
 - cargo deny list, with doesn't allow you use code with not compatible with MIT License
 
-# This repository excludes:
+## This repository excludes:
 - cargo tests - it's will be added in the future // TODO
 - plugins/modules - no, only examples + other repos which are independent of this repository
 
-# Getting Started: (from imvoxcli README)
-__How to start:__  
+## Getting Started: (from imvoxcli README)
+### __How to start:__  
 - Clone this repo: `git clone https://codeberg.org/bhorolsky/imvox.git && cd imvox` or from [github.com](https://github.com/bhorolsky/imvox.git)  
 - Build all workspace: `cargo build --workspace` or `--release` flag for optimized release version  
 - Now you can run imvoxcli: `cargo run -p imvoxcli`  
 
-__Hello world:__  
+### __Hello world:__  
 - Build your hello world module: `cd examples/hello/ && cargo build`  
 - And you can load our module in imvoxcli with command: `/path/to/imvoxcli load /path/to/libimvox_hello.so`  
 
 See more about imvoxcli [there](cli/README.md)  
 
-# Q&A:
+## Q&A:
 - Q: "Is this app an editor? For music, media, or something like that?"  
 - A: __No, this is a runtime for future applications and tools.__  
 - Q: "What is the goal of the project?"  
@@ -41,7 +45,10 @@ We also need to polish the project itself and make this fully possible while it'
 - Q: "Can I use AI?"  
 - A: __For assistance, yes; for blind generation, no. Using AI is super useful, but make sure the comments are meaningful and the code isn't hardcoded, then everything will be perfect. I use AI to write code every day myself__  
 
-# Our Contacts:
+## Our Contacts:
 - [Our Discord](https://discord.gg/c7amwQf4KJ)
 - [Our Telegram](https://t.me/imvoxproject)
 - [bhorolsky GitHub.io page](https://bhorolsky.github.io/)
+
+## License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details
