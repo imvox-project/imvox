@@ -8,3 +8,11 @@ members = [
 default-members = [
     "core",
 ]
+
+[workspace.package]
+name = "imvox"
+version = "0.0.1"
+edition = "2024"
+license = "MIT"
+rust-version = "1.85.1"
+authors = ["bhorolsky b.horolsky@proton.me"]

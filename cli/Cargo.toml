@@ -1,8 +1,10 @@
 [package]
 name = "imvoxcli"
-version = "0.0.1"
-edition = "2024"
-license = "MIT"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
 
 [dependencies]
 imvoxloader = { path = "../loader", version = "0.0.1" }

@@ -1,5 +1,3 @@
-# [WIP](docs/WIP.md)
-
 # What is imvoxexamples?
 This is a collection of simple examples of using imvox and writing libraries on it  
 

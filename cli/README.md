@@ -1,13 +1,14 @@
-# [WIP](docs/WIP.md)
-
 # What is imvoxcli?
-Implementation of a cli-type interface, needed to interact with the imvox core via the imvox loader  
+Implementation of a cli-type interface for imvox plugin system, needed to interact with imvoxcore via imvoxloader  
 
 # This crate includes:
-
+- The logic of the interface interaction with imvoxloader
+- User-oriented features
+- Minimal implementation of imvox interface
 
 # This crate excludes:
-
+- Core logic
+- Plugins
 
 # Getting Started:
 __How To Start:__  
@@ -18,9 +19,3 @@ __How To Start:__
 __Hello world:__  
 - Build your hello world module: `cd examples/hello/ && cargo build`  
 - And you can load our module in cli with command: `/path/to/imvoxcli load /path/to/libimvox_hello.so`  
-
-# How to use builded imvoxcli?
-
-
-# [imvoxcli Documentation](docs/imvoxcli)
-

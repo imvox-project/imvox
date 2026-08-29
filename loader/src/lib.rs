@@ -9,8 +9,8 @@
 use std::collections::HashMap;
 
 use anyhow::{Context, Result};
-use libloading::{Library, Symbol};
 
+use libloading::{Library, Symbol};
 use imvoxcore::{Plugin, PluginVTable, Runtime};
 
 /// Every module must export a function with this exact C signature,

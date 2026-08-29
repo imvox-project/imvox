@@ -1,24 +1,24 @@
 # [WIP](docs/WIP.md)
 
 # What is imvox?
-Is a modular runtime for anything you want with a plugins and a minimal CLI interface for console-based operation  
+Is a modular runtime with plugins  
 This project, it's a cargo workspace for official imvoxcore/loader/cli projects  
 __Our git hostings:__  
 [Codeberg (main)](https://codeberg.org/bhorolsky/imvox)  
-[Github (mirror)](https://github.com/bhorolsky/imvox)  
+[GitHub (mirror)](https://github.com/bhorolsky/imvox)  
 
 # This repository includes:
 - official imvoxcore/loader/cli implementations projects
 - imvox documentation (README, .md files) understandable for beginners
-- cargo deny list, with doesnt allow you use code with not compatible with MIT License
+- cargo deny list, with doesn't allow you use code with not compatible with MIT License
 
 # This repository excludes:
 - cargo tests - it's will be added in the future // TODO
 - plugins/modules - no, only examples + other repos which are independent of this repository
 
-# Getting Started: (from imvoxcli documentation)
+# Getting Started: (from imvoxcli README)
 __How to start:__  
-- Clone this repo: `git clone https://codeberg.org/bhorolsky/imvox.git && cd imvox` or from [github.com](https://github.com/bhorolsky/imvox)  
+- Clone this repo: `git clone https://codeberg.org/bhorolsky/imvox.git && cd imvox` or from [github.com](https://github.com/bhorolsky/imvox.git)  
 - Build all workspace: `cargo build --workspace` or `--release` flag for optimized release version  
 - Now you can run imvoxcli: `cargo run -p imvoxcli`  
 
@@ -27,16 +27,6 @@ __Hello world:__
 - And you can load our module in imvoxcli with command: `/path/to/imvoxcli load /path/to/libimvox_hello.so`  
 
 See more about imvoxcli [there](cli/README.md)  
-
-# READMEs:
-- [imvoxcore](core/README.md)
-- [imvoxloader](loader/README.md)
-- [imvoxcli](cli/README.md)
-
-# Docs:
-- [imvoxcli](docs/imvoxcli)
-- [imvoxloader](docs/imvoxloader)
-- [imvoxcore](docs/imvoxcore)
 
 # Q&A:
 - Q: "Is this app an editor? For music, media, or something like that?"  

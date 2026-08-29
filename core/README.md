@@ -1,5 +1,3 @@
-# [WIP](docs/WIP.md)
-
 # What is imvoxcore?
 The imvox library, no_std, should almost NEVER be linked to an interface (like cli) and should work through a loader layer  
 The core should remain almost unchanged  
@@ -15,7 +13,3 @@ The interface and loader should
 
 
 # How to use builded library?
-
-
-# [imvoxcore Documentation](docs/imvoxcore)
-
