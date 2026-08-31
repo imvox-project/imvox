@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "imvox_hello"
+name = "imvox_hello_world"
 version = "0.0.1"

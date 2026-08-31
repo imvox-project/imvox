@@ -6,12 +6,12 @@ use crate::plugin::Plugin;
 /// capacity array keeps everything on the stack / in static memory.
 pub const MAX_PLUGINS: usize = 32; // TODO: make it so that it can be changed from external forces
 
-pub struct Runtime {
-    plugins: [Option<Plugin>; MAX_PLUGINS],
+pub struct Runtime<'a> {
+    plugins: [Option<Plugin<'a>>; MAX_PLUGINS],
     len: usize,
 }
 
-impl Runtime {
+impl<'a> Runtime<'a> {
     pub const fn new() -> Self {
         Self {
             plugins: [None; MAX_PLUGINS],
@@ -21,7 +21,7 @@ impl Runtime {
 
     /// Register a plugin that `loader` has already resolved from a
     /// dynamic module. Returns `false` if the runtime is full.
-    pub fn load_plugin(&mut self, plugin: Plugin) -> bool {
+    pub fn load_plugin(&mut self, plugin: Plugin<'a>) -> bool {
         if self.len >= MAX_PLUGINS {
             return false;
         }
@@ -30,7 +30,7 @@ impl Runtime {
         true
     }
 
-    pub fn plugins(&self) -> impl Iterator<Item = &Plugin> {
+    pub fn plugins(&self) -> impl Iterator<Item = &Plugin<'a>> {
         self.plugins[..self.len].iter().filter_map(|p| p.as_ref())
     }
 
@@ -42,7 +42,7 @@ impl Runtime {
     }
 }
 
-impl Default for Runtime {
+impl<'a> Default for Runtime<'a> {
     fn default() -> Self {
         Self::new()
     }

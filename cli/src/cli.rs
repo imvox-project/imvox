@@ -4,7 +4,7 @@ use crate::logo::LogoMode;
 
 /// IMVOX CLI — talks to the module loader, never to core directly.
 #[derive(Parser)]
-#[command(name = "imvox", version, about = "imvox cli interface, for testing only")]
+#[command(name = "imvox", version, about = "imvox cli interface, for testing purpose only")]
 pub struct Cli {
     #[command(subcommand)]
     pub command: Option<Command>,

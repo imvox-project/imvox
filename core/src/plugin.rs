@@ -10,13 +10,13 @@ pub struct PluginVTable {
 }
 
 #[derive(Clone, Copy)]
-pub struct Plugin {
-    pub name: &'static str,
+pub struct Plugin<'a> {
+    pub name: &'a str,
     pub vtable: PluginVTable,
 }
 
-impl Plugin {
-    pub const fn new(name: &'static str, vtable: PluginVTable) -> Self {
+impl<'a> Plugin<'a> {
+    pub const fn new(name: &'a str, vtable: PluginVTable) -> Self {
         Self { name, vtable }
     }
 

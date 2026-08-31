@@ -45,10 +45,9 @@ We also need to polish the project itself and make this fully possible while it'
 - Q: "Can I use AI?"  
 - A: __For assistance, yes; for blind generation, no. Using AI is super useful, but make sure the comments are meaningful and the code isn't hardcoded, then everything will be perfect. I use AI to write code every day myself__  
 
-## Our Contacts:
-- [Our Discord](https://discord.gg/c7amwQf4KJ)
-- [Our Telegram](https://t.me/imvoxproject)
-- [bhorolsky GitHub.io page](https://bhorolsky.github.io/)
+## Contacts:
+- [Discord.gg](https://discord.gg/c7amwQf4KJ/)
+- [GitHub.io](https://bhorolsky.github.io/projects/imvox/)
 
 ## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details

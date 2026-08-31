@@ -22,13 +22,13 @@ type RawRunFn = unsafe extern "C" fn();
 /// Keeps loaded `Library` handles alive for as long as the loader lives,
 /// since the function pointers stored in `core::Plugin` point into that
 /// mapped memory.
-pub struct Loader {
-    runtime: Runtime,
+pub struct Loader<'a> {
+    runtime: Runtime<'a>,
     // Keep libraries alive; their symbols back the Plugin vtables in `runtime`.
     libraries: HashMap<String, Library>,
 }
 
-impl Loader {
+impl<'a> Loader<'a> {
     pub fn new() -> Self {
         Self {
             runtime: Runtime::new(),
@@ -42,7 +42,7 @@ impl Loader {
     /// # Safety
     /// This calls into arbitrary external code. The `.so` must export a
     /// symbol `imvox_plugin_run` matching `extern "C" fn()`.
-    pub fn load_module(&mut self, name: &'static str, path: &str) -> Result<()> {
+    pub fn load_module(&mut self, name: &'a str, path: &str) -> Result<()> {
         let lib = unsafe { Library::new(path) }
             .with_context(|| format!("failed to open module at '{path}'"))?;
 
@@ -76,12 +76,12 @@ impl Loader {
     }
 
     /// Access the underlying `core` runtime, if a caller needs it directly.
-    pub fn runtime(&self) -> &Runtime {
+    pub fn runtime(&self) -> &Runtime<'a> {
         &self.runtime
     }
 }
 
-impl Default for Loader {
+impl<'a> Default for Loader<'a> {
     fn default() -> Self {
         Self::new()
     }
