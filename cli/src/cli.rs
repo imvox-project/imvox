@@ -2,7 +2,7 @@ use clap::{Parser, Subcommand};
 
 use crate::logo::LogoMode;
 
-/// IMVOX CLI — talks to the module loader, never to core directly.
+/// IMVOX CLI — talks to the loader, never to core directly.
 #[derive(Parser)]
 #[command(name = "imvox", version, about = "imvox cli interface, for testing purpose only")]
 pub struct Cli {
