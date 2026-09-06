@@ -5,8 +5,8 @@
 # IMVOX
 
 ## What is imvox?
-Is a modular runtime with plugins  
-This project, it's a cargo workspace for official imvoxcore/loader/cli projects  
+Is a modular runtime scoped to media/music work with .so plugins and plugins package manager  
+This project, it's a cargo workspace for official imvox\[core/loader/cli] projects  
 __Our git hostings:__  
 [Codeberg (main)](https://codeberg.org/bhorolsky/imvox)  
 [GitHub (mirror)](https://github.com/bhorolsky/imvox)  
@@ -18,7 +18,8 @@ __Our git hostings:__
 
 ## This repository excludes:
 - cargo tests - it's will be added in the future // TODO
-- plugins/modules - no, only examples + other repos which are independent of this repository
+- opm package manager // TODO
+- plugins/modules - no, only examples + other repos which are independent of this repository // TODO: delete examples
 
 ## Getting Started: (from imvoxcli README)
 ### __How to start:__  
@@ -31,6 +32,9 @@ __Our git hostings:__
 - And you can load our module in imvoxcli with command: `/path/to/imvoxcli load /path/to/libimvox_hello.so`  
 
 See more about imvoxcli [there](cli/README.md)  
+
+## Documentation
+- [DeepWiki](https://deepwiki.com/imvox-project/imvox)
 
 ## Q&A:
 - Q: "Is this app an editor? For music, media, or something like that?"  

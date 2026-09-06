@@ -1,7 +1,8 @@
 //! Plugin ABI definitions.
 //!
 //! `core` is `no_std`, zero-dep. Defines the stable contract for `.so` modules.
-//! `loader` handles dynamic loading and fills the function pointers.
+//! `loader` handles dynamic loading, module management, and orchestration -
+//! this file only describes the shape of a plugin and how to invoke it
 
 #[repr(C)]
 #[derive(Clone, Copy)]

@@ -3,11 +3,14 @@ use std::collections::HashMap;
 use anyhow::{Context, Result};
 use libloading::{Library, Symbol};
 
-use imvoxcore::{Plugin, PluginVTable, Runtime};
+use imvoxcore::{Plugin, PluginVTable};
 
+use crate::runtime::Runtime;
 use crate::types::RawRunFn;
 
-// loads .so modules and feeds them into a no_std imvoxcore runtime
+// The plugin manager: owns the plugin lifecycle, resolves .so modules,
+// keeps loaded libraries alive, and orchestrates execution through its
+// own Runtime. This is the brain of imvox — cli only ever talks to this.
 pub struct Loader<'a> {
     runtime: Runtime<'a>,
     // keep libraries alive, their symbols back the plugin vtables in runtime
@@ -35,10 +38,7 @@ impl<'a> Loader<'a> {
         };
 
         let plugin = Plugin::new(name, PluginVTable { run: run_fn });
-
-        if !self.runtime.load_plugin(plugin) {
-            anyhow::bail!("runtime is full, cannot load module '{path}'");
-        }
+        self.runtime.load_plugin(plugin);
 
         // keep the library mapped so the function pointer stays valid
         self.libraries.insert(name.to_string(), lib);
@@ -56,7 +56,7 @@ impl<'a> Loader<'a> {
         self.runtime.run_all();
     }
 
-    // access the underlying core runtime
+    // access the underlying runtime
     pub fn runtime(&self) -> &Runtime<'a> {
         &self.runtime
     }

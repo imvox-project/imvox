@@ -9,6 +9,7 @@ pub enum LogoMode {
 
 pub fn print_logo(mode: &LogoMode) {
     match mode {
+        LogoMode::Hide => {}
         LogoMode::Show => {
             println!(
                 r#"
@@ -20,7 +21,6 @@ pub fn print_logo(mode: &LogoMode) {
                 "#
             );
         }
-        LogoMode::Hide => {}
         LogoMode::Minimal => {
             println!("imvox cli");
         }
