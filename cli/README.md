@@ -1,16 +1,16 @@
 # What is imvoxcli?
 Implementation of a cli-type interface for imvox plugin system, needed to interact with imvoxcore via imvoxloader  
 
-# This crate includes:
+# This crate includes
 - The logic of the interface interaction with imvoxloader
 - User-oriented features
 - Minimal implementation of imvox interface
 
-# This crate excludes:
+# This crate excludes
 - Core logic
 - Plugins
 
-# Getting Started:
+# Getting Started
 __How To Start:__  
 - Clone this repo: `git clone https://codeberg.org/bhorolsky/imvox.git && cd imvox` or from [github.com](https://github.com/bhorolsky/imvox)  
 - Build all workspace (run it from root of project): `cargo build --workspace` or `--release` flag for optimized release version  
