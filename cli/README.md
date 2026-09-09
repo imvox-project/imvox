@@ -12,7 +12,7 @@ Implementation of a cli-type interface for imvox plugin system, needed to intera
 
 # Getting Started
 __How To Start:__  
-- Clone this repo: `git clone https://codeberg.org/bhorolsky/imvox.git && cd imvox` or from [github.com](https://github.com/bhorolsky/imvox)  
+- Clone this repo: `git clone https://codeberg.org/imvox-project/imvox.git && cd imvox` or from [github.com](https://github.com/imvox-project/imvox)  
 - Build all workspace (run it from root of project): `cargo build --workspace` or `--release` flag for optimized release version  
 - Now you can run cli: `cargo run -p imvoxcli`  
 

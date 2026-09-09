@@ -8,8 +8,8 @@ This project, it's a cargo workspace for official imvox\[core/loader/cli] projec
 __About **WIP** status:__  [WIP.md](docs/WIP.md)
 
 __Git hostings:__  
-[Codeberg (main)](https://codeberg.org/bhorolsky/imvox)  
-[GitHub (mirror)](https://github.com/bhorolsky/imvox)  
+[Codeberg (main)](https://codeberg.org/imvox-project/imvox.git)  
+[GitHub (mirror)](https://github.com/imvox-project/imvox.git)  
 
 ## This repository includes
 - official imvoxcore/loader/cli implementations projects
@@ -23,7 +23,7 @@ __Git hostings:__
 
 ## Getting Started: (from imvoxcli README)
 ### __How to start:__  
-- Clone this repo: `git clone https://codeberg.org/bhorolsky/imvox.git && cd imvox` or from [github.com](https://github.com/bhorolsky/imvox.git)  
+- Clone this repo: `git clone https://codeberg.org/imvox-project/imvox.git && cd imvox` or from [github.com](https://github.com/imvox-project/imvox.git)  
 - Build all workspace: `cargo build --workspace` or `--release` flag for optimized release version  
 - Now you can run imvoxcli: `cargo run -p imvoxcli`  
 
