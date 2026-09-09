@@ -18,11 +18,11 @@ pub struct Cli {
 pub enum Command {
     /// Load a .so module and run it
     Load {
-        /// Path to the .so file
         path: String,
-        /// Name to register the plugin under
-        #[arg(short, long, default_value = "module")] // TODO
-        name: String,
+        /// name to register the plugin under.
+        /// defaults: to the plugin file's name + random hash
+        #[arg(short, long)]
+        name: Option<String>,
     },
     /// List currently loaded plugins
     List,
